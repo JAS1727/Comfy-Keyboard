@@ -1,0 +1,98 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7ac8a;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    color: rgb(252, 188, 69);
+    width: fit-content;
+    font-size: 5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000;
+}
+
+.header_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.speaker{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.dot_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding:1rem;
+}
+
+button{
+    width: 10REM;
+    height: 4REM;
+}
+
+.button_container{
+    display: flex;
+    flex-direction: row;
+}
+
+.piano{
+    display: flex;
+    padding-top: 1rem;
+}
+
+.key{
+    height: calc(var(--width) * 4);
+    width: var(--width);
+}
+
+.white{
+    --width: 100px;
+    background-color: white;
+    border: 1px solid #333;
+}
+
+.white.active {
+    background-color: rgb(226, 226, 200); /*chaged collor value*/
+}
+
+.black{
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+}
+
+.black.active { /*Fixed typo and changed color value*/
+    background-color: rgb(20, 20, 10);
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
